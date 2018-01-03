@@ -34,6 +34,8 @@ class Credits extends Component
                 <br />
                 It is hosted on <a href="https://cloud.google.com" target="_blank" rel="noopener noreferrer" onClick={ this.openPage('https://cloud.google.com')}>Google Cloud</a> and maintained with <a href="https://firebase.google.com" target="_blank" rel="noopener noreferrer" onClick={ this.openPage('https://firebase.google.com')}>Firebase</a>.<br />
                 <br />
+                <a href="https://github.com/razorborg/borg.live" target="_blank" rel="noopener noreferrer" onClick={ this.openPage('https://github.com/razorborg/borg.live')}>borg.live on github</a><br />
+                <br />
                 &copy; Copyright 2018 Jan Martin Borgersen<br />
             </div>
         );
