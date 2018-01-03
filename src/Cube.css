@@ -1,0 +1,153 @@
+.cube-container
+{
+	width: 100vmin;
+	height: 100vmin;
+	perspective: 200vmin;
+	margin:auto;
+}
+
+.cube
+{
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	margin: 25%;
+	transform-style: preserve-3d;
+}
+
+.cube .face
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: .9;
+}
+
+.cube .face.face0
+{
+    transform: translateZ(25vmin);
+    background-color:#00f;
+}
+
+.cube .face.face1
+{
+    transform: rotateY(90deg) translateZ(25vmin);
+    background-color:#d00;
+}
+
+.cube .face.face2
+{
+    transform: rotateY(180deg) translateZ(25vmin);
+    background-color:#008000;
+}
+
+.cube .face.face3
+{
+    transform: rotateY(-90deg) translateZ(25vmin);
+    background-color:#FF8C00;
+}
+
+.cube .face.face4
+{
+    transform: rotateX(-90deg) translateZ(25vmin) rotate(180deg);
+    background-color:#ff0;
+    color:#000;
+}
+
+.cube .face.face5
+{
+    transform: rotateX(90deg) translateZ(25vmin);
+    background-color:#fff;
+    color:#000;
+}
+
+@keyframes spin-face0
+{
+    0%   {transform: rotateX(0deg) rotateY(0deg)}
+    50% {transform: rotateX(360deg) rotateY(180deg)}
+    100% {transform: rotateX(720deg) rotateY(360deg)}
+}
+@keyframes spin-face1
+{
+    0%   {transform: rotateX(0deg) rotateY(-90deg)}
+    50% {transform: rotateX(360deg) rotateY(90deg)}
+    100% {transform: rotateX(720deg) rotateY(270deg)}
+}
+@keyframes spin-face2
+{
+    0%   {transform: rotateX(0deg) rotateY(180deg)}
+    50% {transform: rotateX(360deg) rotateY(360deg)}
+    100% {transform: rotateX(720deg) rotateY(540deg)}
+}
+@keyframes spin-face3
+{
+    0%   {transform: rotateX(0deg) rotateY(90deg)}
+    50% {transform: rotateX(360deg) rotateY(270deg)}
+    100% {transform: rotateX(720deg) rotateY(450deg)}
+}
+@keyframes spin-face4
+{
+    0%   {transform: rotateX(90deg) rotateY(180deg)}
+    50% {transform: rotateX(-90deg) rotateY(0deg)}
+    100% {transform: rotateX(-270deg) rotateY(-180deg)}
+}
+@keyframes spin-face5
+{
+    0%   {transform: rotateX(-90deg) rotateY(0deg)}
+    50% {transform: rotateX(90deg) rotateY(180deg)}
+    100% {transform: rotateX(270deg) rotateY(360deg)}
+}
+
+.animate
+{
+    animation: spin-face0 20s ease-in-out infinite;
+}
+.animate.face1
+{
+    animation: spin-face1 20s ease-in-out infinite;
+}
+.animate.face2
+{
+    animation: spin-face2 20s ease-in-out infinite;
+}
+.animate.face3
+{
+    animation: spin-face3 20s ease-in-out infinite;
+}
+.animate.face4
+{
+    animation: spin-face4 20s ease-in-out infinite;
+}
+.animate.face5
+{
+    animation: spin-face5 20s ease-in-out infinite;
+}
+
+.showface
+{
+    transition: 1s ease-in;
+}
+.showface.face0
+{
+    transform: rotateX(0deg) rotateY(0deg);
+}
+.showface.face1
+{
+    transform: rotateX(0deg) rotateY(-90deg);
+}
+.showface.face2
+{
+    transform: rotateX(0deg) rotateY(180deg);
+}
+.showface.face3
+{
+    transform: rotateX(0deg) rotateY(90deg);
+}
+.showface.face4
+{
+    transform: rotateX(90deg) rotateY(180deg);
+}
+.showface.face5
+{
+    transform: rotateX(-90deg) rotateY(0deg);
+}

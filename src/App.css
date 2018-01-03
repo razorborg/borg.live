@@ -1,0 +1,54 @@
+.centered {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	width:100%;
+	text-align:center;
+}
+.normal-dark-mono-text {
+	font-family:monospace;
+	font-size:1em;
+	color:#000;
+}
+.normal-light-mono-text {
+	font-family:monospace;
+	font-size:1em;
+	color:#fff;
+}
+.big-dark-mono-text {
+	font-family:monospace;
+	font-size:4em;
+	color:#000;
+}
+.big-light-mono-text {
+	font-family:monospace;
+	font-size:4em;
+	color:#fff;
+}
+.media-button-light {
+	background-color:rgba(0,0,0,0);
+	border:0;
+	font-size:3em;
+	color:rgba(255,255,255,100);
+}
+.media-button-dark {
+	background-color:rgba(0,0,0,0);
+	border:0;
+	font-size:3em;
+	color:rgba(0,0,0,100);
+}
+.padded {
+	padding:2em;
+}
+.scrollable {
+	margin:2em;
+	padding:1em;
+	border:1px solid rgba(0,0,0,0.2);
+	border-radius:0.5em;
+	overflow-y:scroll;
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+}

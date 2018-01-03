@@ -1,0 +1,12 @@
+.quote
+{
+    transition: opacity 1s ease-in;
+}
+.quote.out
+{
+    opacity:0.0001;
+}
+.quote.in
+{
+    opacity:1;
+}
