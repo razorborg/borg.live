@@ -36,7 +36,8 @@ class Credits extends Component
                 <br />
                 <a href="https://github.com/razorborg/borg.live" target="_blank" rel="noopener noreferrer" onClick={ this.openPage('https://github.com/razorborg/borg.live')}>borg.live on github</a><br />
                 <br />
-                &copy; Copyright 2018 Jan Martin Borgersen<br />
+                &copy; Copyright 2017-{ (new Date()).getFullYear() }<br />
+                Jan Martin Borgersen<br />
             </div>
         );
     }

@@ -1,3 +1,7 @@
+.App {
+	overflow:hidden;
+}
+
 .centered {
 	position: relative;
 	top: 50%;
@@ -51,4 +55,12 @@
 	right:0;
 	bottom:0;
 	left:0;
+}
+@media screen and (max-width: 600px), screen and (max-height: 500px) {
+	.normal-dark-mono-text, .normal-light-mono-text {
+		font-size:0.7em;
+	}
+	.big-dark-mono-text, .big-light-mono-text {
+		font-size:2em;
+	}
 }
