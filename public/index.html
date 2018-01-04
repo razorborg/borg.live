@@ -10,20 +10,6 @@
     <title>BORG.LIVE</title>
   </head>
   <body>
-    <div style="position:absolute;top:0;right:0;height:3em;width:3em;">
-        <button is="google-cast-button" id="castbutton">Cast</button>
-    </div>
     <div id="root"></div>
   </body>
-  <script>
-        window['__onGCastApiAvailable'] = function(isAvailable) {
-            if (isAvailable) {
-                cast.framework.CastContext.getInstance().setOptions({
-                    receiverApplicationId: chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID,
-                    autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED
-                });
-            }
-        };
-  </script>
-  <script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
 </html>
