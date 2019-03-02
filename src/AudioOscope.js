@@ -6,11 +6,17 @@ class AudioOscope extends Component
     constructor(props)
     {
         super(props);
+        this.state = {
+            ctx:null,
+            ctxStarted:false
+        };
+
         this.toggleAudioStreamPlaying = this.toggleAudioStreamPlaying.bind(this);
     }
 
     componentDidMount()
     {
+        var _this = this;
         var ctx = new (window.AudioContext || window.webkitAudioContext)();
         var scopeCtx = document.getElementById('scope').getContext('2d');
         var analyser = ctx.createAnalyser();
@@ -20,10 +26,15 @@ class AudioOscope extends Component
         audioSrc.connect(analyser);
         analyser.connect(ctx.destination);
 
+        this.setState({ctx:ctx,ctxStarted:false});
+
         function draw()
         {
-            drawScope(analyser, scopeCtx, 'rgb(255, 255, 0)', 'rgba(0, 0, 250, 0.2)');
-            requestAnimationFrame(draw);
+            if (_this.state.ctxStarted)
+            {
+                drawScope(analyser, scopeCtx, 'rgb(255, 255, 0)', 'rgba(0, 0, 250, 0.2)');
+            }
+            requestAnimationFrame(draw);    
         }
         draw();
 
@@ -58,9 +69,15 @@ class AudioOscope extends Component
     }
     toggleAudioStreamPlaying(event)
     {
-        BorgLiveStore.dispatch({
-            type:ActionTypes.TOGGLE_AUDIO_STREAM_PLAYING
-        });
+        if (this.state.ctx !== null)
+        {
+            this.state.ctx.resume().then(()=>{
+                BorgLiveStore.dispatch({
+                    type:ActionTypes.TOGGLE_AUDIO_STREAM_PLAYING
+                });
+            });
+            this.setState({ctxStarted:true});
+        }
         if (event !== null)
         {
             event.preventDefault();
