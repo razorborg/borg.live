@@ -6,8 +6,10 @@ import Nav from './Nav';
 import Cube from './Cube';
 
 // TODO:
-// - Find visible face when cube is spinning
-// - Why somafm streams still not working in chrome/mobile?
+// - Find visible face when cube is spinning (rework animation in js)
+// BUGS:
+// - mobile-ios: somafm streams not working
+// - mobile-ios: oscope not working
 
 class App extends Component
 {

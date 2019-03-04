@@ -28,16 +28,6 @@ class AudioOscope extends Component
 
         this.setState({ctx:ctx,ctxStarted:false});
 
-        function draw()
-        {
-            if (_this.state.ctxStarted)
-            {
-                drawScope(analyser, scopeCtx, 'rgb(255, 255, 0)', 'rgba(0, 0, 250, 0.2)');
-            }
-            requestAnimationFrame(draw);    
-        }
-        draw();
-
         function drawScope(analyser, ctx, strokeColor, fillColor)
         {
             var width = ctx.canvas.width;
@@ -66,6 +56,15 @@ class AudioOscope extends Component
             ctx.lineTo(x - risingEdge, height - timeData[x] * scaling);
             ctx.stroke();
         }
+        function draw()
+        {
+            if (_this.state.ctxStarted)
+            {
+                drawScope(analyser, scopeCtx, 'rgb(255, 255, 0)', 'rgba(0, 0, 250, 0.2)');
+            }
+            requestAnimationFrame(draw);    
+        }
+        draw();
     }
 
     componentDidUpdate (prevProps)
