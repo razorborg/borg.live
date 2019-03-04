@@ -16,14 +16,15 @@ const initialState =
         animate:true,
         face:-1
     },
-    audioStream:{name:'SOMAFM - Groove Salad', url:'http://ice1.somafm.com/groovesalad-128-aac'},
+    audioStream:{name:'SOMAFM - Groove Salad', url:'http://ice1.somafm.com/groovesalad-128-mp3'},
     audioStreamPlaying:false,
     location:'',
     streams:[
-        {name:'SOMAFM - Groove Salad', url:'http://ice1.somafm.com/groovesalad-128-aac'},
-        {name:'SOMAFM - Lush', url:'http://ice1.somafm.com/lush-128-aac'},
-        {name:'SOMAFM - Beat Blender', url:'http://ice1.somafm.com/beatblender-128-aac'},
-        {name:'SOMAFM - Suburbs of Goa', url:'http://ice1.somafm.com/suburbsofgoa-128-aac'},
+        {name:'Armin Van Buren Trance', url:'http://de-hz-fal-stream04.rautemusik.fm/trance'},
+        {name:'SOMAFM - Groove Salad', url:'http://ice1.somafm.com/groovesalad-128-mp3'},
+        {name:'SOMAFM - Lush', url:'http://ice1.somafm.com/lush-128-mp3'},
+        {name:'SOMAFM - Beat Blender', url:'http://ice1.somafm.com/beatblender-128-mp3'},
+        {name:'SOMAFM - Suburbs of Goa', url:'http://ice1.somafm.com/suburbsofgoa-128-mp3'},
         {name:'KQED Live Stream', url:'https://streams2.kqed.org/kqedradio'}
     ],
     time:(new Date())
