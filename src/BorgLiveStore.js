@@ -20,7 +20,6 @@ const initialState =
     audioStreamPlaying:false,
     location:'',
     streams:[
-        {name:'Armin Van Buren Trance', url:'http://de-hz-fal-stream04.rautemusik.fm/trance'},
         {name:'SOMAFM - Groove Salad', url:'http://ice1.somafm.com/groovesalad-128-mp3'},
         {name:'SOMAFM - Lush', url:'http://ice1.somafm.com/lush-128-mp3'},
         {name:'SOMAFM - Beat Blender', url:'http://ice1.somafm.com/beatblender-128-mp3'},

@@ -1,19 +1,78 @@
 .nav-container {
-    display:flex;
+    position:fixed;
+    top:0;
+    left:-100%;
     width:100%;
-    height:5em;
+    height:4em;
+    display:flex;
+    flex-direction:row-reverse;
+    justify-content: space-between;
+}
+.nav-control {
+    position:fixed;
+    top:0;
+    left:0;
+    width:4em;
+    height:4em;
+    display:flex;
     flex-direction:row;
     justify-content: space-between;
 }
 
-.nav-container .navitem {
+
+
+.nav-container .navitem, .nav-control .navitem {
     margin: 0;
     padding: 0;
-    height: 5em;
-    width: 5em;
+    height: 4em;
+    width: 4em;
+    position:static;
+    top: auto;
+    left: auto;
     display:flex;
     text-align:center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
 }
+
+.nav-container .navitem.icon, .nav-control .navitem.icon {
+    background-color:#000;
+}
+
+/* Animate expand and collapse */
+
+.nav-container.expand {
+    left:0;
+    animation: change-expand-nav 0.5s ease-in-out 1;
+}
+.nav-container.collapse {
+    left:-100%;
+    animation: change-collapse-nav 0.5s ease-in-out 1;
+}
+.nav-control.expand .navitem.icon i {
+    transform: rotate(360deg);
+    animation: rotate-icon-right 0.5s ease-in-out 1;
+}
+.nav-control.collapse .navitem.icon i {
+    transform: rotate(0deg);
+    animation: rotate-icon-left 0.5s ease-in-out 1;
+}
+
+@keyframes change-collapse-nav {
+    from { left:0; }
+    to { left:-100%; }
+}
+@keyframes change-expand-nav {
+    from { left:-100%; }
+    to { left:0; }
+}
+@keyframes rotate-icon-right {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+@keyframes rotate-icon-left {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+}
+
