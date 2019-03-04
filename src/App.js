@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import BorgLiveStore from './BorgLiveStore';
 import AudioPlayer from './AudioPlayer';
+import Nav from './Nav';
 import Cube from './Cube';
 
 class App extends Component
@@ -31,6 +32,7 @@ class App extends Component
         return (
             <div className="App">
                 <AudioPlayer store={ this.state.store } />
+                <Nav store={ this.state.store } />
                 <Cube store={ this.state.store } />
             </div>
         );

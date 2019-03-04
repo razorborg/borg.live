@@ -26,39 +26,31 @@
 .cube .face.face0
 {
     transform: translateZ(25vmin);
-    background-color:#00f;
 }
 
 .cube .face.face1
 {
     transform: rotateY(90deg) translateZ(25vmin);
-    background-color:#d00;
 }
 
 .cube .face.face2
 {
     transform: rotateY(180deg) translateZ(25vmin);
-    background-color:#008000;
 }
 
 .cube .face.face3
 {
     transform: rotateY(-90deg) translateZ(25vmin);
-    background-color:#FF8C00;
 }
 
 .cube .face.face4
 {
     transform: rotateX(-90deg) translateZ(25vmin) rotate(180deg);
-    background-color:#ff0;
-    color:#000;
 }
 
 .cube .face.face5
 {
     transform: rotateX(90deg) translateZ(25vmin);
-    background-color:#fff;
-    color:#000;
 }
 
 @keyframes spin-face0

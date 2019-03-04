@@ -7,6 +7,7 @@ import Credits from './Credits';
 import StreamSelector from './StreamSelector';
 import Quotes from './Quotes';
 import './Cube.css';
+import './FaceColors.css';
 
 class Cube extends Component
 {
@@ -21,7 +22,6 @@ class Cube extends Component
     {
         return function (event)
         {
-            console.log('setCubeFace:' + face);
             BorgLiveStore.dispatch({
                 type: ActionTypes.SET_CUBE_FACE,
                 face: face
