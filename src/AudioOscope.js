@@ -67,16 +67,23 @@ class AudioOscope extends Component
             ctx.stroke();
         }
     }
+
+    componentDidUpdate (prevProps)
+    {
+        if (this.state.ctx !== null && !this.state.ctxStarted && this.props.store.audioStreamPlaying)
+        {
+            this.state.ctx.resume();
+            this.setState({ctxStarted:true});
+        }
+    }
+
     toggleAudioStreamPlaying(event)
     {
         if (this.state.ctx !== null)
         {
-            this.state.ctx.resume().then(()=>{
-                BorgLiveStore.dispatch({
-                    type:ActionTypes.TOGGLE_AUDIO_STREAM_PLAYING
-                });
+            BorgLiveStore.dispatch({
+                type:ActionTypes.TOGGLE_AUDIO_STREAM_PLAYING
             });
-            this.setState({ctxStarted:true});
         }
         if (event !== null)
         {
