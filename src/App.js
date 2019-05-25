@@ -5,7 +5,7 @@ import AudioPlayer from './AudioPlayer';
 import Nav from './Nav';
 import Cube from './Cube';
 
-// TODO:
+// TODO: 
 // - Find visible face when cube is spinning (rework animation in js)
 // BUGS:
 // - mobile-ios: somafm streams not working
