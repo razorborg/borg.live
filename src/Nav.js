@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import BorgLiveStore, { ActionTypes } from './BorgLiveStore';
 import './Nav.css';
 import './FaceColors.css';
-import { runInThisContext } from 'vm';
 
 class Nav extends Component
 {
